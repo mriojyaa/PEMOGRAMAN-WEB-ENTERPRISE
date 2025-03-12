@@ -1,13 +1,22 @@
 import {readFile,writeFile} from 'fs/promises';
+import { console } from 'inspector';
 
 async function extractFile() {
-    const file = await readFile ('data.txt','utf8');
-    console.info(file);
+    try {
+        const data = await readFile ('data.txt','utf8');
+        console.log('isi file :', data);
+    } catch (err) {
+        console.error('Eror membaca file',err);
+    }
 }
 
 async function writetoFile(){
-    const file = await writeFile ('output.txt','ini adalahh otuput dari node js');
-    console.info('write file berhasil');
+    try{
+         await writeFile ('output.txt','Hello, Node.js!');
+         console.log('file berhasil tertulis.');
+    }catch (err){
+        console.error('eror menulis file:',err);
+    }
 }
 
 extractFile()

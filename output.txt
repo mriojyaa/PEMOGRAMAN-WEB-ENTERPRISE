@@ -1,1 +1,1 @@
-ini adalahh otuput dari node js
+Hello, Node.js!

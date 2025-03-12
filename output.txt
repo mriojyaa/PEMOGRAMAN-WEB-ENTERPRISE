@@ -1,0 +1,1 @@
+ini adalahh otuput dari node js
